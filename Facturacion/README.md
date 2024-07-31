@@ -19,9 +19,6 @@ Ejemplo: `http://localhost:3000/api/sale/1`
 ### Agregar una nueva factura
 **POST** `http://localhost:3000/api/addSale`
 
-**Headers**:
-Content-Type: application/json
-
 **Body**:
 ```json
 {
