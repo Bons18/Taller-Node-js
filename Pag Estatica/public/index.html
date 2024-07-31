@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Date Difference Calculator</title>
+    <title>Days Between Dates</title>
 </head>
 <body>
-    <h1>Date Difference Calculator</h1>
+    <h1>Calculate Days Between Dates</h1>
     <form id="dateForm">
         <label for="startDate">Start Date:</label>
         <input type="date" id="startDate" name="startDate" required>
@@ -16,11 +16,11 @@
         <br>
         <button type="submit">Calculate</button>
     </form>
-    <p id="result"></p>
+    <h2 id="result"></h2>
 
     <script>
-        document.getElementById('dateForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
+        document.getElementById('dateForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
             const startDate = document.getElementById('startDate').value;
             const endDate = document.getElementById('endDate').value;
             const response = await fetch(`/api/daysBetweenDates?startDate=${startDate}&endDate=${endDate}`);
